@@ -23,7 +23,9 @@ img {
     width: 40%;
 }
 
-ol, ul, dl { /*Because of bootstrap*/
+ol, ul, dl, h1, h2, 
+h3, p, h4, h5, 
+h6, address, figure { /*Because of bootstrap*/
     margin: 0;
     padding: 0;
 }
@@ -55,7 +57,7 @@ main > section > article {
 
 header {
     display: flex;
-    background-image: url("/img/");
+    background-image: url("/img/pic-01.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -132,5 +134,238 @@ main > section:nth-child(odd) {
         align-items: center;
         font-size: 24px;
     }
+
+    /** ABOUT **/
+    .about {
+        row-gap: 5vh;
+        width: 90%;
+    }
+
+    .about > section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5vh;
+    }
+
+    .about > section > article,
+    .about > section aside {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vh;
+    }
+
+    .about > article {
+        width: 70%;
+        row-gap: 3vh;
+    }
+
+    .about ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4vh;
+        width: 100%;
+    }
+
+    .skills > li {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vh;
+    }
+
+    .skills li > aside {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .about h6 {
+        display: flex; /*span whole*/
+        height: 5px;
+        border-radius: 20px;
+        width: 100%;
+        background-color: darkgray;
+    }
+
+    .about span {
+        height: 100%;
+        width: 100%;
+        background-color: darkorange;
+        border-radius: 20px;
+    }
+
+    .about li:nth-child(3) span {
+        width: 80%;
+    }
+
+    .about li:last-child span {
+        width: 90%;
+    }
+
+    /** PORTFOLIO **/
+    .portfolio {
+        row-gap: 10vh;
+    }
+
+    .portfolio > article {
+        width: 50%;
+    }
+
+    .portfolio h3 {
+        color: dimgray;
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    .portfolio p {
+        color: dimgray;
+    }
+
+    .portfolio figure {
+        display: flex;
+        flex-wrap: wrap;
+        width: 95%;
+        row-gap: 1vh;
+    }
+
+    .portfolio img {
+        width: 100%;
+        height: 30vh;
+    }
+
+    /* .portfolio figure {
+        padding-top: 5%;
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+    }
+
+    .portfolio img {
+        width: 25%;
+        outline: 5px solid white;
+    } */
+    
+    /** CONTACT **/
+    .contact {
+        background-color: black;
+        row-gap: 10vh;
+    }
+
+    .contact aside {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5vh;
+    }
+
+    .contact > article {
+        row-gap: 3vh;
+    }
+
+    /* 더 specific 하기 때문에 */
+    .contact h3 {
+        font-size: 30px;
+        font-weight: 400;
+        color: whitesmoke;
+    }
+
+    .contact ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vh;
+    }
+
+    .contact li {
+        display: flex;
+        column-gap: 3vw;
+        align-items: center;
+    }
+
+    .contact li:first-child > a {
+        color: whitesmoke;
+    }
+
+    .contact i {
+        color: darkorange;
+    }
+
+    .contact a {
+        color: darkorange;
+    }
+
+    .contact > section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5vh;
+    }
+
+    .contact > section > article {
+        width: 100%;
+    }
+
+    .contact h4 {
+        font-size: 30px;
+        color: whitesmoke;
+        text-transform: uppercase;
+    }
+
+    address {
+        font-size: 14px;
+        color: whitesmoke;
+    }
+
+    form,
+    form > section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1vh;
+    }
+
+    input, textarea {
+        padding: 5%;
+        background-color: transparent;
+        border: 1px solid darkgray;
+        color: whitesmoke;
+    }
+
+    [type="submit"] {
+        width: 70%;    
+        text-transform: uppercase;
+    }
+
+    ::placeholder {
+        color: whitesmoke;
+    }
+
+    /** FOOTER **/
+    footer {
+        background-color: rgb(30,30,30);
+        padding-top: 5%;
+        padding-bottom: 5%;
+        align-items: center;
+        row-gap: 3vh;
+    } 
+
+    footer ul {
+        display: flex;
+        list-style-type: none;
+        column-gap: 5vw;
+    }
+
+    footer [class*="fa-"] { 
+        /*attribute selector 써야함*/
+        width: vh;
+        height: 5vh;
+        border: 1px solid whitesmoke;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: whitesmoke;
+    }
+
+    footer p {
+        color: whitesmoke;
+    }
+
 
 }
